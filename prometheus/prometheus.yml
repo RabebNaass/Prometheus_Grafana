@@ -34,7 +34,9 @@ scrape_configs:
     static_configs:
       - targets: ['pushgateway:9091']
 
-
+  - job_name: 'myql'
+    static_configs:
+      - targets: ['localhost:9104'] 
 alerting:
   alertmanagers:
   - scheme: http
